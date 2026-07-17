@@ -147,10 +147,18 @@ Values:
 Customer-Churn-Prediction-ML
 │
 ├── data
+│ │
 │ ├── raw
+│ │ └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+│ │
 │ └── processed
+│ ├── X_train.csv
+│ ├── X_test.csv
+│ ├── y_train.csv
+│ └── y_test.csv
 │
 ├── notebooks
+│ │
 │ ├── 01_EDA.ipynb
 │ ├── 02_Feature_Engineering.ipynb
 │ └── 03_Model_Training.ipynb
@@ -159,13 +167,15 @@ Customer-Churn-Prediction-ML
 │ └── random_forest_model.pkl
 │
 ├── src
+│ │
 │ ├── data_preprocessing.py
 │ ├── train.py
 │ └── predict.py
 │
 ├── app.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── LICENSE
 
 
 
@@ -255,29 +265,28 @@ The trained model is deployed using Streamlit.
 ## Run Application
 
 ```bash
-streamlit run app.py
 🖥️ Application Flow
 
+The application works through the following pipeline:
+
 User Input
-
-⬇️
-
+    |
+    ↓
 Data Processing
-
-⬇️
-
+    |
+    ↓
 Feature Transformation
-
-⬇️
-
+    |
+    ↓
 Random Forest Model
-
-⬇️
-
+    |
+    ↓
 Prediction Result
 
-Churn / Not Churn
+Output:
 
+✅ Customer Will Stay
+❌ Customer Will Churn
 ⚙️ Installation & Setup
 Clone Repository
 git clone https://github.com/shaikyusufvali/Customer-Churn-Prediction-ML.git
@@ -290,21 +299,21 @@ Activate Environment
 Windows:
 
 venv\Scripts\activate
-Install Dependencies
+Install Required Libraries
 pip install -r requirements.txt
-Run Application
+Run Streamlit Application
 streamlit run app.py
 🔮 Future Improvements
 
-Future enhancements:
+Planned improvements:
 
-Hyperparameter tuning using GridSearchCV
-XGBoost and LightGBM models
-SHAP based model explainability
-Cloud deployment using AWS/Azure
-Automated ML pipeline
-Customer retention recommendation system
-CI/CD integration
+🚀 Hyperparameter tuning using GridSearchCV
+🚀 XGBoost and LightGBM model implementation
+🚀 SHAP based model explainability
+🚀 Cloud deployment using AWS/Azure
+🚀 Automated Machine Learning pipeline
+🚀 Customer retention recommendation system
+🚀 CI/CD integration
 👨‍💻 Author
 Shaik Yusuf Vali
 
@@ -312,21 +321,23 @@ Artificial Intelligence & Machine Learning Student
 
 Skills
 
-Python | SQL | Machine Learning | Data Analysis | Artificial Intelligence
+Python | SQL | Machine Learning | Data Analysis | Artificial Intelligence | Generative AI
 
 ⭐ Project Highlights
 
-✅ Complete End-to-End ML Project
-✅ Industry-style Folder Structure
-✅ Data Preprocessing Pipeline
+✅ Complete End-to-End Machine Learning Project
+✅ Industry Standard Project Structure
+✅ Data Cleaning & Feature Engineering Pipeline
 ✅ Multiple ML Algorithms Tested
 ✅ Random Forest Model Deployment
-✅ Streamlit Web Application
+✅ Real-Time Prediction using Streamlit
 ✅ GitHub Portfolio Ready
 
 📌 Conclusion
 
-This project demonstrates how Machine Learning can be used to solve real-world business problems by predicting customer churn and helping companies improve customer retention through data-driven insights.
+This project demonstrates how Machine Learning can be applied to solve real-world business problems by predicting customer churn.
+
+The system helps companies identify potential churn customers, improve retention strategies, and make better data-driven decisions.
 
 ⭐ If you like this project, consider giving it a star!
 
